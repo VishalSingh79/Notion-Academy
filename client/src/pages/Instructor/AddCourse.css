@@ -1,0 +1,59 @@
+.addcourse{
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.addcourse-content{
+    width: 80%;
+    min-height: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+    gap: 2rem;
+}
+
+.course-tracker{
+    display: flex;
+
+}
+
+.tracker-line{
+    width: 100px;  
+    height: 0px;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+}
+
+.tracker-step{
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width:450px) {
+    .addcourse-content{
+        width: 90%;
+    }
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

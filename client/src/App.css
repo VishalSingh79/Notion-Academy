@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  font-family:sans-serif;
+ 
+}
+
+/* Hide the scroll bar for the entire body but allow scrolling */
+body {
+  overflow: -moz-scrollbars-none;  /* For older Firefox */
+  -ms-overflow-style: none;        /* For Internet Explorer and Edge */
+  scrollbar-width: none;           /* For modern Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;  /* For Chrome, Safari, and Opera */
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+ 
+}
+.NotionAcademy{
+  width: 100%;
+  font-family: sans-serif;
+}

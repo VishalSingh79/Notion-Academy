@@ -1,0 +1,55 @@
+.my-profile-section{
+    width: fit-content;
+    height:50px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.4rem;
+    position: relative;
+}
+.my-profile-content{
+   width: fit-content;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   gap: 0.3rem;
+}
+
+.my-picture{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all ease 200ms;
+}
+.my-profile-content:hover{
+    cursor: pointer;
+   
+}
+.rec-div1{
+padding: 0.8rem 0.4rem;
+min-width: 165px;
+width: fit-content;
+height: fit-content;
+min-height: 40px;
+background-color:white;
+border-radius: 6px;
+position: absolute;
+top: 2.9rem;
+left: -50px;
+display: flex;
+flex-direction: column;
+gap: 0.3rem;
+font-family: sans-serif;
+font-size: small;
+font-weight: 550;
+}
+
+.link-name1{
+    padding: 0.7rem 0.2rem;
+}
+.link-name1:hover{
+    background-color: #9196a0b6;
+    border-radius: 5px;
+}

@@ -1,0 +1,198 @@
+/* General styles for the container */
+.about-us-container {
+    background-color:  #000814;
+    color: #ffffff;
+    padding: 0rem;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 2rem;
+}
+
+
+.about-header h3 {
+    font-size: 1.2rem;
+    color: #ffffff90;
+}
+
+
+.about-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.about-header h1 span {
+    color: #00bfff;
+}
+
+.about-header p {
+    max-width: 900px;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    color: #9b9c9e;
+    letter-spacing: 0.2px;
+    font-family:'Trebuchet MS';
+}
+
+
+.about-images {
+
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    justify-content: center;
+}
+
+
+.about-images img {
+    width: 350px;
+    height: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.about-quote {
+    margin: 6rem auto;
+    max-width: 1100px;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 0rem 2rem;
+    letter-spacing: 0.4px;
+}
+
+.about-quote span {
+    color: #00bfff;
+    font-weight: 600;
+}
+
+.about-content {
+    background-color: #282c3a;
+    padding: 5rem 2rem;
+    border-radius: 2px;
+    margin: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.content-section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.content-section h2 {
+    color: #ff6347;
+    font-size: 1.8rem;
+}
+
+.content-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.vision{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mission{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.founding-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.vision-mission {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.vision, .mission {
+    width: 45%;
+}
+
+.vision h2, .mission h2 {
+    color: #00bfff;
+}
+
+.vision p, .mission p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  
+    
+    .about-content {
+        gap: 0rem;
+    }
+
+
+    .vision-mission {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .vision, .mission {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .about-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-quote {
+        font-size: 1.2rem;
+    }
+
+    .content-section h2, .vision h2, .mission h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about-us-container {
+        padding: 0rem;
+    }
+
+
+    .about-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-header p, .about-quote {
+        font-size: 0.9rem;
+    }
+    
+    .about-images{
+        padding: 0rem 1rem;
+    }
+
+    .about-images img {
+        width: 250px;
+        height: 150px;
+    }
+
+    .content-section p, .vision p, .mission p {
+        font-size: 0.9rem;
+    }
+
+    .about-quote {
+        font-size: 1rem;
+    }
+}

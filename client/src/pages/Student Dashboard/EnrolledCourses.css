@@ -1,0 +1,51 @@
+.enrolled-courses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #000814;
+}
+
+.enrolled-courses-content{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.enrolled-courses-header{
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 2.1rem;
+}
+
+.enrolled-courses-main{
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+@media (max-width:900px) {
+    
+.enrolled-courses-content{
+    width: 75vw;
+
+}
+}
+
+@media (max-width:500px) {
+    
+    .enrolled-courses-content{
+        width: 90vw;
+    
+    }
+    .enrolled-courses-header{
+      
+        font-size: 1.5rem;
+        
+    }
+}

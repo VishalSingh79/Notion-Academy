@@ -1,0 +1,22 @@
+.btn-content{
+    display: flex;
+    padding: 0.6rem 1rem;
+    background-color: #F8CF09;
+    border: none;
+    border-radius: 7px;
+    font-size: medium;
+    font-weight: 500;
+    gap: 0.8rem;
+}
+
+.btn-content:hover{
+    cursor: pointer;
+    scale: 0.98;
+}
+
+@media (max-width:350px) {
+    .btn-content {
+        padding: 0.5rem 0.7rem;
+        font-size: small;
+    }
+}

@@ -1,0 +1,70 @@
+.my-courses-container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+  }
+.my-course-content-container{
+    width: 70%;
+    min-width:fit-content;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title-mycourse {
+    height: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #e0e0e0; /* Adjust color to match theme */
+  }
+  
+  .add-course-btn {
+    display: flex;
+    align-items: center;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-course-btn:hover {
+    background-color: #155cb0; /* Darken button color on hover */
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+
+@media (max-width:500px) {
+    .my-course-content-container{
+        width: 95%;
+    }
+    .add-course-btn{
+      padding:10px 10px ;
+    }
+    .title-mycourse{
+        font-size: 1.5rem;
+    }
+    .icon{
+        display: none;
+    }
+}  
+  

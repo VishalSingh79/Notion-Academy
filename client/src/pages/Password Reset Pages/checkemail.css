@@ -1,0 +1,94 @@
+.checkemail{
+    width:100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #000814;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkemail-content{
+    width: 400px;
+    height:fit-content;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.checkemail-content p:nth-of-type(1){
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.checkemail-content p:nth-of-type(2){
+    color: #838894;
+    letter-spacing: 0.3px; 
+}
+
+.verify-btn{
+    width:100%;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-weight: 520;
+    background-color:#FFD70B;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 0.8rem 0rem;
+    color: black;
+    font-size: medium;
+    transition: all ease 200ms;
+}
+.verify-btn:hover{
+scale: 0.95;
+cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    letter-spacing: 0.2px;
+} 
+.btn1{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+@media (max-width:450px) {
+.checkemail-content{
+       width: 300px;
+}
+.checkemail-content p:nth-of-type(1){
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+.checkemail-content p:nth-of-type(2){
+    color: #838894;
+    letter-spacing: 0.3px; 
+    font-size: 13px;
+}
+}
+
+@media (max-width:350px) {
+.checkemail-content{
+    padding: 0rem 1rem;
+   width: 100%;
+}
+
+.checkemail-content p:nth-of-type(1){
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+.checkemail-content p:nth-of-type(2){
+    color: #838894;
+    letter-spacing: 0.3px; 
+    font-size: 12px;
+}
+}
+    

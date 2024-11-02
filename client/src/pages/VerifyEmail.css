@@ -1,0 +1,131 @@
+.verify-email{
+        width:100vw;
+        min-height: 100vh;
+        box-sizing: border-box;
+        background-color: #000814;
+        font-family: sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.verify-email-content{
+    width: 400px;
+    height:fit-content;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.verify-email-content p:nth-of-type(1){
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.verify-email-content p:nth-of-type(2){
+    color: #838894;
+    letter-spacing: 0.3px; 
+}
+
+.verification-code{
+    display: flex;
+    align-items: center;
+    padding:0.5rem 0rem;
+    justify-content: space-between;
+}
+
+.input-code{
+    width: 50px;
+    height: 50px;
+    background-color: #171D28;
+    border:none;
+    border-radius: 10px;
+    color: #F0F3FF;
+    text-align: center;
+    font-size: 16.5px;
+}
+
+.input-code::placeholder{
+    color: #989DAB;    
+}
+.verify-btn{
+        width:100%;
+        text-align: center;
+        letter-spacing: 0.4px;
+        font-weight: 520;
+        background-color:#FFD70B;
+        border: 1px solid black;
+        border-radius: 6px;
+        padding: 0.8rem 0rem;
+        color: black;
+        font-size: medium;
+        transition: all ease 200ms;
+}
+.verify-btn:hover{
+    scale: 0.95;
+    cursor: pointer;
+  }
+
+.btns{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    letter-spacing: 0.2px;
+} 
+.btn1{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.btn2{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #46A4C5;
+} 
+
+
+@media (max-width:450px) {
+    .verify-email-content{
+       width: 300px;
+    }
+    .input-code{
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .verify-email-content p:nth-of-type(1){
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+    }
+    .verify-email-content p:nth-of-type(2){
+        color: #838894;
+        letter-spacing: 0.3px; 
+        font-size: 13px;
+    }
+}
+
+@media (max-width:350px) {
+    .verify-email-content{
+       width: 230px;
+    }
+    .input-code{
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .verify-email-content p:nth-of-type(1){
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+    }
+    .verify-email-content p:nth-of-type(2){
+        color: #838894;
+        letter-spacing: 0.3px; 
+        font-size: 13px;
+    }
+}
+

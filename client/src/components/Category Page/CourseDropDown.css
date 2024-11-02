@@ -1,0 +1,194 @@
+.course-dropdown-data{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #171C29;
+    border-radius: 5px;
+}
+
+.course-dropdown-sectionname{
+    background-color: #171C29;
+    padding: 10px 18px;
+    color: whitesmoke;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.course-dropdown-sectionname p:nth-of-type(2){
+    color: orange;
+    font-style: italic;
+}
+
+.course-dropdown-sectionname p:nth-of-type(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-arrow{
+    font-size: 1.2rem;
+    
+}
+
+.course-dropdown-subsectionname{
+    background-color: inherit;
+    padding: 10px 22px;
+    color: whitesmoke;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.course-dropdown-subsectionname p:nth-of-type(2){
+    color: orange;
+    font-size: 15px;
+}
+
+.each-section2-part21{
+    font-size: 2rem;
+    letter-spacing: 0.2px;
+    font-family: 'Trebuchet MS';
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.each-section2-part22{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 0.3rem;
+    padding-left: 0.2rem;
+    color: #9b9c9e;
+}
+
+.subSection-summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.course-dropdown-subsection-description{
+    padding: 10px 30px;
+    display: flex;
+    gap: 5px;
+    letter-spacing: 0.5px;
+}
+
+each-section2-part24{
+    width: fit-content;
+    height: fit-content;
+}
+
+.author-short-info{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+}
+
+.each-section2-part24{
+    width: 100%;
+    height: fit-content;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.author-tag-name{
+    font-size: 2.1rem;
+    letter-spacing: 0.2px;
+    font-family: 'Trebuchet MS';
+}
+.author-name-short{
+    font-size: 1.3rem;
+    letter-spacing: 0.3px;
+}
+
+.author-short-desc{
+    font-size: medium;
+    letter-spacing: 0.1px;
+    color: #aeaeae;
+}
+
+@media (max-width:900px) {
+    .each-section1-content{
+        width: 90%;
+    }
+    .each-section2-content{
+        width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    .each-course-part22{
+        display: none;
+    }
+    .each-section2-part1 {
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+
+}
+
+@media (max-width:350px) {
+    .each-section1-content{
+        width: 96%;
+    }
+    .each-section2-content{
+        width: 96%;
+    }
+    .each-section2-part1 {
+        padding-top: 27px;
+        padding-left: 10px;
+    }
+    .course-dropdown-sectionname {
+        background-color: #171C29;
+        padding: 10px 2px;
+    }
+    .course-dropdown-subsectionname {
+        background-color: inherit;
+        padding: 10px 6px;
+    }
+    .course-dropdown-subsection-description {
+        padding: 8px 12px;
+    }
+    .each-section2-part11 {
+        font-size: 1.4rem;
+    }
+    .each-section2-part12 {
+        font-size: small;
+    }
+    .each-section2-part21 {
+        font-size: 1.6rem;
+    }
+    .author-tag-name {
+        font-size: 1.7rem;
+    }
+    .author-short-desc {
+        font-size: small;
+    }
+    .course-dropdown-subsection-description{
+        font-size: small;
+    }
+    .course-dropdown-sectionname p:nth-of-type(2) {
+        font-size: small;
+    }
+    .course-dropdown-subsectionname p:nth-of-type(2){
+        font-size: small;
+    }
+    .each-sublecture-name{
+        font-size: small;
+    }
+    .each-lecture-name{
+        font-size: small;
+    }
+}

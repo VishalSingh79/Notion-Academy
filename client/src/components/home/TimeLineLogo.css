@@ -1,0 +1,40 @@
+.logo-main{
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+.logo-image{
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size:10px;
+    flex-direction: column;
+    row-gap: 0.4rem;
+}
+.logo-text{
+margin-left: 1rem;
+}
+.logo-text h4 {
+    margin: 0.1rem 0rem;
+}
+.logo-text   p{
+    margin: 0.3rem 0rem;
+    font-size: small;
+}
+.v-line{
+    width:2px ;
+    height: 40px;
+    background-color: #8388948e;
+    border-radius: 10px;
+    opacity: 0.6;
+    margin-left: 0.45rem;
+}
+
+
+@media (max-width :500px) {
+    .logo-text {
+        margin-left: 0.2rem;
+        width: 80%;
+    }
+}

@@ -1,0 +1,19 @@
+.sidebar-content{
+   width: 100%; 
+}
+
+.btn-logout{
+    display: flex;
+    align-items: center;  
+    gap: 0.7rem;
+    padding: 0.8rem;
+    padding-left: 1rem;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    box-sizing: border-box;
+    border: none;
+    background-color: inherit;
+    color:#838995;
+    font-size: medium;
+}

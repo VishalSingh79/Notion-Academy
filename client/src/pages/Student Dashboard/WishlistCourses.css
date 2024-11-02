@@ -1,0 +1,203 @@
+.wishlist-courses{
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    background-color: inherit;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist-courses-content{
+    width: 70%;
+    min-height: calc(100vh - 50px);
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wishlist-course-tagname{
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding: 2.2rem 0rem;
+    color: white;
+}
+
+.wishlist-each-card{
+    width: 100%;
+    min-height: 120px;
+    background-color: #171C29;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.wishlist-each-card-thumbnail{
+    display: flex;
+    max-width: 75%;
+}
+
+.wishlist-each-card-main-img{
+    width:140px;
+    height:120px;
+    min-width:100px;
+    min-height:110px;
+    border-radius:5px
+}
+
+.wishlist-each-card-thumbnail-img{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.wishlist-each-card-thumbnail-info{
+    width: fit-content;
+    padding-left: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.wishlist-each-card-thumbnail-info p:nth-of-type(1){
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.wishlist-each-card-thumbnail-info p:nth-of-type(2){
+    color: rgb(167, 166, 166);
+    font-size: 14px;  
+    letter-spacing: 0.5px;
+}
+
+.wishlist-each-card-thumbnail-info p:nth-of-type(3){
+    color: rgb(210, 209, 209);
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    
+}
+
+.wishlist-each-card-thumbnail-info p:nth-of-type(4){
+    color: rgb(253, 47, 47);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.wishlist-each-card-btns{
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.wishlist-each-card-btn1{
+    background-color: rgb(247, 63, 63);
+    padding: 0.55rem 0.8rem;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 15.7px;
+    letter-spacing: 0.4px;
+    transition: all ease 180ms;
+}
+
+.wishlist-each-card-btn1:hover{
+    cursor: pointer;
+    scale: 1.01;
+    background-color: rgb(247, 40, 40);
+}
+
+.wishlist-each-card-btn2{
+    background-color:  #F8CF09;
+    color: black;
+    padding: 0.55rem 0.8rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15.7px;
+    letter-spacing: 0.4px;
+    transition: all ease 180ms;
+}
+
+.wishlist-each-card-btn2:hover{
+    cursor: pointer;
+    scale: 1.01;
+    background-color: #ebc508;
+}
+
+.wishlist-courses-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width:950px) {
+    .wishlist-courses-content {
+        width: 90%;     
+    }
+}
+
+@media (max-width:600px) {
+    .wishlist-courses-content {
+        width: 90%;     
+    }
+    .wishlist-each-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .wishlist-each-card-thumbnail {
+        display: flex;
+        min-width: 100%;
+    }
+    
+   .wishlist-each-card-thumbnail-info p:nth-of-type(2) {
+    font-size: 13px;
+   }
+}
+
+@media (max-width:450px) {
+    .wishlist-course-tagname {
+        font-size: 1.75rem;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        padding: 1.5rem 0rem;
+        color: white;
+    }
+
+    .wishlist-courses-content {
+        width: 95%;     
+    }
+    .wishlist-each-card-thumbnail-info p:nth-of-type(3) {   
+        font-size: 12px;     
+    }
+    .wishlist-each-card-btns {
+        gap: 0.8rem;
+    }
+    .wishlist-each-card-thumbnail-info p:nth-of-type(4) {
+        font-size: 14px;    
+    }
+}
+
+@media (max-width:350px) {
+    .wishlist-each-card-thumbnail-info p:nth-of-type(3) {   
+        display: none;   
+    }
+    .wishlist-each-card-thumbnail-info p:nth-of-type(2) {
+        font-size: 12px;
+    }
+    .wishlist-each-card-thumbnail-info p:nth-of-type(1) {
+        font-size: 12px;
+    }
+}
+

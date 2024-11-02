@@ -1,0 +1,242 @@
+.navbar{
+    width:100vw;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: #000814;
+    font-family: sans-serif;
+    border-bottom: 1px solid #2C333F;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+.navbar-content{
+   width: 68vw;
+   height: 100%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+.nav-links{
+    display: flex;
+    gap:1rem;
+}
+.each-link{
+    appearance:none;
+    list-style-type: none;
+    width: fit-content;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    transition: all ease 200ms;
+}
+
+.btns-sidebar{
+   width: fit-content;
+   height: 50px;
+   display: flex;
+   align-items: center;
+}
+
+.log-in{
+   border:1px solid #2C333F;
+   background-color: #161D29;
+   padding: 8px 12px;
+   color: whitesmoke;
+   border-radius: 6px;
+   letter-spacing: 0.7px;
+   transition: all ease 200ms;
+}
+.log-in:hover{
+    cursor: pointer;
+    scale: 0.97;
+}
+.sign-up:hover{
+    cursor: pointer;
+    scale: 0.97;
+}
+
+.sign-up{
+    margin-left: 1rem;
+    border:1px solid #2C333F;
+    background-color: #161D29;
+    padding: 8px 12px;
+    color: whitesmoke;
+    border-radius: 6px;
+    letter-spacing: 0.7px;
+    transition: all ease 200ms;
+ }
+
+.cart-icon{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.cart-icon:hover{
+    cursor: pointer;
+}
+
+.catalog-content{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    transition: all ease 200ms;
+    gap: 2px;
+}
+.catalog-content:hover{
+    cursor: pointer;
+}
+.rec-div{
+    padding: 0.6rem 0.4rem;
+    min-width: 200px;
+    width: fit-content;
+    height: fit-content;
+    min-height: 40px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 2.8rem;
+    left: -75px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: 550;
+}
+.catalog{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.link-name{
+    padding: 0.8rem 0.2rem;
+}
+.link-name:hover{
+    background-color: #8c929bb6;
+    border-radius: 5px;
+}
+
+.cart-icon1{
+    display: none;
+}
+
+.my-profile-section1{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
+
+@media (max-width:1000px) {
+    .navbar-content{
+        width: 85vw;
+    }
+}
+
+@media (max-width:800px) {
+    .navbar-content{
+        width: 95vw;
+    }
+    .hamburger{
+        display: block;
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .each-link{
+        display: none;
+    }
+    .btns-sidebar{
+        display: none;
+    }
+    .mobile-menu{
+        width: 100vw;
+        height: fit-content;
+        position: absolute;
+        top: 50px;
+        left: 0rem;
+        background-color: #0a0a0a;
+    }
+    .mobile-menu-item{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 1rem;
+    }
+    .each-link1{
+        color: white;
+        padding: 10px 0px;
+        list-style-type: none;
+        letter-spacing: 0.3px;
+        font-size: 1.1rem;
+        font-family:'Trebuchet MS';
+    }
+    .each-link1-content{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .log-in-mobile-menu{
+        border:1px solid #2C333F;
+        background-color: #161D29;
+        padding: 8px 12px;
+        color: whitesmoke;
+        border-radius: 6px;
+        letter-spacing: 0.7px;
+        margin: 5px 0px;
+     }
+     .log-in-mobile-menu:hover{
+         cursor: pointer;
+         scale: 0.97;
+     }
+     .sign-up-mobile-menu:hover{
+         cursor: pointer;
+         scale: 0.97;
+     }
+     
+     .sign-up-mobile-menu{
+         margin: 5px 0px;
+         border:1px solid #2C333F;
+         background-color: #161D29;
+         padding: 8px 12px;
+         color: whitesmoke;
+         border-radius: 6px;
+         letter-spacing: 0.7px;
+        
+      }
+
+    /* //// */
+/* Catalog Popup */
+  .catalog-popup {
+    display: none;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+  }
+  
+  .catalog-popup.open {
+    display: block;
+    transform: scale(1);
+  }
+  .catalog-popup.close {
+    display: none;
+    transform: scale(0);
+  }
+  
+  .link-name {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+  .link-name:hover {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+  }
+}
+
+  

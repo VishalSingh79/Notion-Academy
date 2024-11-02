@@ -1,0 +1,276 @@
+.footer-section{
+    width: 100%;
+    padding: 2rem 0rem;
+    background-color: #171D28;
+}
+
+.footer-content{
+    margin: 0 auto;
+    min-height: 500px;
+    width: 82vw;
+    display: flex;
+    flex-direction: column;
+}
+.footer-details{
+   height: fit-content;
+   width: 100%;
+   display: flex;
+   padding-bottom: 2rem;
+}
+.horizontal-line{
+    width: 100%;
+    height: 2px;
+    background-color: #2C323E;
+    border-radius: 10px;
+}
+
+.footer-head{
+    width: 100%;
+    height: fit-content;
+}
+
+.part-1st{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.part11{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    gap:0.2rem;
+    align-items:start;
+}
+
+.part11 p{
+   margin: 0.3rem;
+   color: #5d677bf5;
+   font-size: medium;
+   letter-spacing: 0.1px;
+   padding-left: 1rem;
+   
+}
+
+.image-sec{
+    height:65px;
+}
+.part12{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    gap:0.9rem;
+    align-items:start;
+    letter-spacing: 0.2px;
+    padding-left: 1rem;
+}
+.heading-part12{
+    font-size: large;
+    color: rgb(168, 164, 164);
+    font-weight: 600;
+    margin-top: 1rem;
+    letter-spacing: 0.6px;
+}
+.part13{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    gap:0.9rem;
+    align-items:start;
+    letter-spacing: 0.2px;
+    padding-left: 3rem;
+}
+
+.parts-1st{
+    display: flex;
+}
+.parts-1st-content{
+    display: flex;
+    height: fit-content;
+}
+.part-3rd-content{
+   display: flex;       
+}
+
+.part13-content{
+    display: flex;
+    flex-direction: column;  
+    gap:0.9rem;
+    align-items:start;
+    letter-spacing: 0.2px;
+}
+
+.part-2nd{
+   width: 2px; 
+   background-color: #2C323E;
+   border-radius: 10px;
+   margin-left: 5rem;
+   opacity: 0.6;
+}
+
+.part-3rd{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.part31{
+   display: flex;
+   flex-direction: column;
+   gap:0.9rem;
+   align-items:start;
+   letter-spacing: 0.2px;
+   padding-left: 4rem;
+}
+.part32{
+    display: flex;
+    flex-direction: column;
+    gap:0.9rem;
+    align-items:start;
+    letter-spacing: 0.2px;
+    padding-left: 4rem;
+ }
+.image-sec1 {
+    width: 170px;
+}
+
+
+
+.part33{
+    display: flex;
+    flex-direction: column;
+    gap:0.9rem;
+    align-items:start;
+    letter-spacing: 0.2px;
+    padding-left: 4rem;
+ }
+
+.footer-head{
+    width: 100%;
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    margin: 0 auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.part41{
+    display: flex;
+    gap: 0.7rem;
+    color: #5d677bf5;
+    font-size: small;
+}
+.part42{
+    display: flex;
+    align-items: center;
+    color: #5d677bf5;
+    font-size: small;
+    letter-spacing: 0.7px;
+}
+
+@media (max-width : 1230px) {
+    .part13 {
+        display: flex;
+       
+        flex-direction: row;
+        padding-left:0rem ;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .parts-1st-content{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .part-3rd-content{
+       width: 100%;
+       justify-content: space-between;
+    }
+    .footer-content {
+        width: 90vw;
+       }
+}
+
+@media (max-width:1000px) {
+    .footer-content {
+     width: 95vw;
+    }
+}
+
+@media (max-width : 760px){
+    .part-2nd {
+       display: none;
+    }
+    .footer-details {
+       flex-wrap: wrap;
+       justify-content: center;  
+    }
+    .part-1st {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .part13 {
+        padding: 0rem 1.2rem;
+    }
+    .part31 {  
+        padding:0rem;
+    }
+    .part-3rd-content {
+        padding: 2rem 1.2rem;
+        gap: 2rem;
+    
+    }
+    .part33 {
+        padding: 0rem 1.2rem;
+    }
+    .part32 {
+        padding-left: 0rem;
+    }
+    .part-3rd {
+        width: 80%;
+    }
+
+}
+
+@media (max-width : 500px) {
+    .footer-head {
+        justify-content: center;
+    }
+    .part13 {
+        padding: 0rem;
+    }
+    .part-3rd-content {
+        padding: 0rem;   
+    }
+    .part33 {
+        padding: 0rem ;
+    }
+    .footer-content {
+        width: 100vw;
+       
+    }
+   
+    .footer-details {
+        width: 100%;
+        
+    }
+    .part-1st {
+       width:97% 
+    }
+    .part-3rd {
+        width: 97%;
+    }
+    .part11 p {
+        margin: 0.3rem;    
+        padding-left: 0rem;
+    }
+    .image-sec1 {
+        width: 170px;
+    }
+    .part42 {
+     font-size: smaller;
+     letter-spacing: 0;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+    }
+} 

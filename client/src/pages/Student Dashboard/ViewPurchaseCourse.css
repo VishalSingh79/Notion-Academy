@@ -1,0 +1,87 @@
+.main-viewCourse-content{
+    width: 100vw;
+    min-height: calc(100vh);
+    background-color:#000814 ;
+    height: fit-content;
+    display: flex;
+   
+}
+
+.dashboard-sidebar{
+    display: none;
+}
+
+.main-viewCourse-content1{
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    background-color:#000814 ;
+    height: fit-content;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.video-wrapper p:nth-of-type(2){
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-size: 600;
+    padding: 1rem 1rem;
+    font-family: sans-serif;
+
+}
+.video-wrapper p:nth-of-type(3){
+    color: rgb(194, 191, 191);
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0rem 1rem;
+    font-family: sans-serif;
+}
+
+@media (max-width:800px) {
+    .video-wrapper {
+        position: relative;
+        z-index: 1; /* Ensure video is below the sidebar */
+        transform: translateZ(0); /* Enforce stacking context */
+    }
+    
+   
+    .viewCourseSidebar{
+        display: none;
+    }
+    .main-viewCourse-content{
+        flex-direction: column;
+      
+    }
+    .dashboard-sidebar{
+        scale: 1;
+        background-color: #161C28;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        position: relative;
+        z-index: 100;
+    }
+    
+    .dashboard-sidebar-content1{
+      position: absolute;
+      background-color: inherit;
+      min-height: calc(100vh - 3rem);
+      top: 3rem;
+      left: 0rem;
+      z-index: 100;
+      transition: all 600 ease-in;
+    }
+    .video-section {
+        position: relative;
+        z-index: 1;
+    }
+    .main-video-section{
+        z-index: 1;
+    }
+    .video-player-views{
+        height: 270px;
+    }
+}
+

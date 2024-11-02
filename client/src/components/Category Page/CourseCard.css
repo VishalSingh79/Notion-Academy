@@ -1,0 +1,73 @@
+.course-card{
+    max-width:300px ;
+    width: fit-content;
+    min-height: 350px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    border: 1px solid rgba(128, 128, 128, 0.352);
+    padding: 0.5rem;
+    border-radius: 10px;
+    justify-content: center;
+    transition: all ease 300ms;
+}
+
+.course-card:hover{
+    scale: 1.01;
+}
+
+.category-each-course-name{
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+.category-each-course-desc{
+    font-size: 14px;
+    color: rgb(174, 172, 172);
+    letter-spacing: 0.12px;
+    padding-left: 5px;
+}
+
+.category-read-more{
+    all: unset;
+    color: aqua;
+    
+}
+.category-read-more:hover{
+    cursor: pointer;
+}
+
+
+.category-each-course-price{
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    font-size: 17.6px;
+    padding-left: 5px;
+}
+
+.category-view-course{
+    width: 100%;
+    color: black;
+    text-align: center;
+    background-color: #FFD70B;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: all ease 200ms;
+}
+.category-view-course:hover{
+    scale: 0.99;
+}
+
+@media (max-width:400px) {
+    .course-card{
+        max-width:260px ;
+    }
+    .category-course-image{
+        width: 240px;
+    }
+}

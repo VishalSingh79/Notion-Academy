@@ -1,0 +1,115 @@
+.upload-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-label {
+  font-size: 0.875rem; /* equivalent to text-sm */
+  color: #E5E7EB; /* richblack-5 */
+}
+
+.upload-label sup {
+  color: #F472B6; /* pink-200 */
+}
+
+.upload-dropzone {
+  display: flex;
+  min-height: 250px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px dotted #374151; /* richblack-500 */
+  background-color: #1F2937; /* richblack-700 */
+  position: relative; /* Added relative positioning */
+}
+
+.upload-dropzone-active {
+  background-color: #111827; /* richblack-600 */
+}
+
+.upload-preview-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.upload-preview-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.upload-cancel-btn {
+  margin-top: 0.75rem;
+  color: #9CA3AF; /* richblack-400 */
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-input-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.upload-icon-container {
+  display: grid;
+  aspect-ratio: 1 / 1;
+  width: 56px; /* equivalent to w-14 */
+  place-items: center;
+  border-radius: 50%;
+  background-color: #D1D5DB; /* pure-greys-800 */
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #FFEBC6; /* yellow-50 */
+}
+
+.upload-browse-text {
+  margin-top: 0.5rem;
+  max-width: 200px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #A1A1AA; /* richblack-200 */
+}
+
+.upload-browse-highlight {
+  font-weight: 600;
+  color: #FFEBC6; /* yellow-50 */
+}
+
+.upload-specs-list {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: disc;
+  font-size: 0.75rem;
+  color: #A1A1AA; /* richblack-200 */
+}
+
+.upload-error {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: #F472B6; /* pink-200 */
+  letter-spacing: 0.05em;
+}
+
+/* Add this for clickable overlay */
+.upload-input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}

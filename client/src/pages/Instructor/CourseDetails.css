@@ -1,0 +1,95 @@
+.course-form1{
+    height: fit-content;
+    width: fit-content;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* background-color: #1e1e1e; */
+    background-color: #1b1c1e;
+}
+
+.course-form {
+    width:470px;
+    /* background-color: #2c2c2c; */
+    background-color: #1b1c1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: #f2f2f2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    /* background-color: #1b1c1e; */
+    color: #fff;
+    outline: none;
+  }
+  .price-tag-form{
+    position: relative;
+  }
+  .price-wrapper{
+    position: absolute;
+    top: 2.4rem;
+    left: 5px;
+    font-size: 1.5rem;
+    background-color: #333;
+    width: 26px;
+    height: 28px;
+
+  }
+  
+  
+  .form-group input[type="file"] {
+    padding: 0;
+  }
+  
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-group button:hover {
+    background-color: #ffcc00;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+@media (max-width:500px) {
+  .course-form1{
+    width:100%;   
+    
+}
+
+.course-form {
+    width:100%;
+   
+  }
+}  

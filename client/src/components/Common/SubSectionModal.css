@@ -1,0 +1,111 @@
+/* SubSectionModal.css */
+
+/* Modal Background */
+.modal-background {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Modal Container */
+  .modal-container {
+    margin-top: 20px;   
+    width: fit-content;
+    max-width: max-content;
+    min-width:400px;
+    border-radius: 10px;
+    background-color: #1b1b1b;
+    border: 1px solid #333;
+    height: fit-content;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292929;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .modal-header p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e5e5e5;
+  }
+  
+  .modal-header button {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Form Styles */
+  .form-container {
+    padding: 10px 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group label {
+    color: #e5e5e5;
+    font-size: 0.875rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #e5e5e5;
+    border: none;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #999;
+  }
+  
+  .form-group textarea {
+    min-height: 70px;
+    resize: none;
+  }
+  
+  .error-message {
+    font-size: 0.75rem;
+    color: #ff7272;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+  }
+  
+  .icon-button {
+    padding: 10px 20px;
+    background-color: #ffbb42;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 600;
+  }
+  
+@media (max-width:400px) {
+  .modal-container { 
+    min-width:230px;
+  }
+}  

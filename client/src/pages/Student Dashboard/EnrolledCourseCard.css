@@ -1,0 +1,59 @@
+.each-enrolled-course-card{
+    max-width: 300px;
+    min-width: 200px;
+    min-height: fit-content;
+    background-color: inherit;
+    border: 1px solid rgb(188, 186, 186);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 15px;
+    gap: 0.7rem;
+
+}
+
+.each-enrolled-course-card p:nth-of-type(1){
+    width: 100%;  
+}
+
+.enrolled-course-card-thumbnail {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.each-enrolled-course-card p:nth-of-type(2){
+   color: rgb(176, 173, 173);
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+.each-enrolled-course-card p:nth-of-type(3){
+    width: 100%;  
+    font-size: 15px;
+    color: rgb(192, 192, 188);
+}
+
+.each-enrolled-course-card p:nth-of-type(4){
+    width: 100%;  
+    text-align: center;
+    background-color: #F8CF09;
+    color: black;
+    font-weight: 600;
+    padding: 0.6rem 0rem;
+    border-radius: 6px;
+    margin-top: 5px;
+    transition: all 200ms ease-in-out;
+}
+
+.each-enrolled-course-card p:nth-of-type(4):hover{
+   cursor: pointer;
+   scale: 1.01;
+ 
+}
+
+@media (max-width:500px) {
+    .each-enrolled-course-card{
+        padding: 10px;
+    }
+}

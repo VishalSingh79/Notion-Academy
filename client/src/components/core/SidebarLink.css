@@ -1,0 +1,20 @@
+.sidebar-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 0.7rem;
+    padding: 0.8rem;
+    padding-left: 1rem;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    box-sizing: border-box;
+}
+
+.sidebar-link-icon{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

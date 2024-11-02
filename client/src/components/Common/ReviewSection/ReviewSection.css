@@ -1,0 +1,41 @@
+.review-section{
+    width: 100%;
+    min-width: max-content;
+    background-color:#000814;
+    height: fit-content;
+    padding-bottom: 4rem ;
+    padding-top: 2rem;
+}
+
+.review-heading{
+    min-width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    padding: 2rem 0rem;
+    font-size: 28px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+
+.review-section-content{
+    width: 100%; 
+}
+.review-card{
+    width: 100vw;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    overflow-y: hidden;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+@media (max-width:450px) {
+    .review-card{
+        width: 95vw;
+    }
+}
