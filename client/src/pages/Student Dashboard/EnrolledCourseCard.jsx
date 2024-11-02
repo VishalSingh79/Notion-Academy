@@ -17,7 +17,7 @@ const EnrolledCourseCard = ({course}) => {
        </p>
        <p>{course.courseName}</p>
        <p>{course.courseDescription.substring(0,60)}</p>
-       <p onClick={()=> window.open(`https://notion-academy.vercel.app/course/watchCourse/:${course._id}`,"_blank")}>Learn Now</p>
+       <p onClick={()=> window.open(`https://notion-academy.vercel.app/course/watchCourse/${course._id}`,"_blank")}>Learn Now</p>
     </div>
   )
 }
