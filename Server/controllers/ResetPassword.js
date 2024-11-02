@@ -28,7 +28,7 @@ exports.resetPasswordToken = async(req,res)=>{
         const token=crypto.randomUUID();
         
         //creating the url// frontend URL
-        const url =`http://localhost:5173/update-password/${token}`;
+        const url =`https://notion-academy.vercel.app//update-password/${token}`;
         
         const firstname = isExist.firstName;
         const lastname = isExist.lastName; 

@@ -67,7 +67,7 @@ zexports.courseEnrollmentEmail = (courseName, name) => {
     
     <body>
         <div class="container">
-            <a href="https://studynotion-edtech-project.vercel.app"><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
+            <a href="https://notion-academy.vercel.app"><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
                     alt="Notion Academy Logo"></a>
             <div class="message">Course Registration Confirmation</div>
             <div class="body">
