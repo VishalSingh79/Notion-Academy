@@ -3,7 +3,7 @@ import { useDropzone } from "react-dropzone";
 import { FiUploadCloud } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import './Upload.css';
-import "video-react/dist/video-react.css";
+//import "video-react/dist/video-react.css";
 import { Player } from "video-react";
 
 export default function Upload({
