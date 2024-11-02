@@ -1,4 +1,4 @@
-zexports.courseEnrollmentEmail = (courseName, name) => {
+exports.courseEnrollmentEmail = (courseName, name) => {
     return `<!DOCTYPE html>
     <html>
     
@@ -76,7 +76,7 @@ zexports.courseEnrollmentEmail = (courseName, name) => {
                     are excited to have you as a participant!</p>
                 <p>Please log in to your learning dashboard to access the course materials and start your learning journey.
                 </p>
-                <a class="cta" href="https://studynotion-edtech-project.vercel.app/dashboard">Go to Dashboard</a>
+                <a class="cta" href="https://notion-academy.vercel.app/dashboard">Go to Dashboard</a>
             </div>
             <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
                     href="mailto:us55547660@gmail.com">notionacademy.com</a>. We are here to help!</div>
