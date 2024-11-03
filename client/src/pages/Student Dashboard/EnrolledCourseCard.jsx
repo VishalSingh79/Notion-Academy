@@ -23,3 +23,4 @@ const EnrolledCourseCard = ({course}) => {
 }
 
 export default EnrolledCourseCard
+

@@ -4,12 +4,12 @@
 }
 
 .upload-label {
-  font-size: 0.875rem; /* equivalent to text-sm */
-  color: #E5E7EB; /* richblack-5 */
+  font-size: 0.875rem;
+  color: #E5E7EB;
 }
 
 .upload-label sup {
-  color: #F472B6; /* pink-200 */
+  color: #F472B6;
 }
 
 .upload-dropzone {
@@ -19,32 +19,39 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  border: 2px dotted #374151; /* richblack-500 */
-  background-color: #1F2937; /* richblack-700 */
-  position: relative; /* Added relative positioning */
+  border: 2px dotted #374151;
+  background-color: #1F2937;
+  position: relative;
 }
 
 .upload-dropzone-active {
-  background-color: #111827; /* richblack-600 */
+  background-color: #111827;
 }
 
 .upload-preview-container {
   display: flex;
-  width: 100%;
   flex-direction: column;
+  width: 100%;
+  /* height: 250px; */
   padding: 1.5rem;
 }
 
-.upload-preview-image {
+.upload-preview-image,
+.upload-preview-container video {
   height: 100%;
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
 }
 
+/* Hide video controls */
+.upload-preview-container video {
+  pointer-events: none;
+}
+
 .upload-cancel-btn {
   margin-top: 0.75rem;
-  color: #9CA3AF; /* richblack-400 */
+  color: #9CA3AF;
   text-decoration: underline;
   background: none;
   border: none;
@@ -62,15 +69,15 @@
 .upload-icon-container {
   display: grid;
   aspect-ratio: 1 / 1;
-  width: 56px; /* equivalent to w-14 */
+  width: 56px;
   place-items: center;
   border-radius: 50%;
-  background-color: #D1D5DB; /* pure-greys-800 */
+  background-color: #D1D5DB;
 }
 
 .upload-icon {
   font-size: 2rem;
-  color: #FFEBC6; /* yellow-50 */
+  color: #FFEBC6;
 }
 
 .upload-browse-text {
@@ -78,12 +85,12 @@
   max-width: 200px;
   text-align: center;
   font-size: 0.875rem;
-  color: #A1A1AA; /* richblack-200 */
+  color: #A1A1AA;
 }
 
 .upload-browse-highlight {
   font-weight: 600;
-  color: #FFEBC6; /* yellow-50 */
+  color: #FFEBC6;
 }
 
 .upload-specs-list {
@@ -92,17 +99,17 @@
   justify-content: space-between;
   list-style-type: disc;
   font-size: 0.75rem;
-  color: #A1A1AA; /* richblack-200 */
+  color: #A1A1AA;
 }
 
 .upload-error {
   margin-left: 0.5rem;
   font-size: 0.75rem;
-  color: #F472B6; /* pink-200 */
+  color: #F472B6;
   letter-spacing: 0.05em;
 }
 
-/* Add this for clickable overlay */
+/* Clickable overlay */
 .upload-input-overlay {
   position: absolute;
   top: 0;

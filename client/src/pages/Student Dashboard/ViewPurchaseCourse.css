@@ -11,6 +11,10 @@
     display: none;
 }
 
+.main-video-section{
+   min-width: calc(100vw - 310px); 
+}
+
 .main-viewCourse-content1{
     width: 100vw;
     min-height: calc(100vh);

@@ -9,7 +9,12 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     overflow-y: scroll;
+    
   }
+  ::-webkit-scrollbar {
+    display: none;
+}
+
   
 
   .modal-container {
@@ -21,7 +26,7 @@
     background-color: #1b1b1b;
     border: 1px solid #333;
     height: fit-content;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
   
 
