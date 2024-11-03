@@ -558,8 +558,9 @@ export const getAllEnrolledCourses = async(token) =>{
 
 export const eachEnrolledCourseData = async (courseId, token) => {
   const toastId = toast.loading("Loading...");
-  console.log("COURSEID ", courseId);
-
+  console.log("HIII");
+  console.log("COUEID ", courseId);
+  console.log("token",token);
   try {
     // Append courseId as a query parameter in the URL
     const response = await apiConnector(
@@ -578,6 +579,7 @@ export const eachEnrolledCourseData = async (courseId, token) => {
 
     return {data,user};
   } catch (error) {
+    console.log("Hii")
     toast.dismiss(toastId);
     console.log("EACH DETAILED ENROLLED COURSE API ERROR............", error);
     toast.error(error.message);

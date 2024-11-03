@@ -13,13 +13,17 @@ import FooterSection from '../Common/Footer/FooterSection';
 import { addWishlistCourses } from '../../Services/Operations/courseDetailsAPI';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { BuyCourse } from '../../Services/Operations/coursePayment';
+
 
 const CourseCardDetails = () => {
   const {courseId} = useParams();
   const courseid = courseId.substring(1,courseId.length)
+  const {userDetail} =useSelector(state => state.profile);
   const {token} =useSelector(state => state.auth);
   const [eachCourse,setEachCourse] = useState(null);
-  const [totalLectures, setTotalLectures] = useState(0);
+  //const [totalLectures, setTotalLectures] = useState(0);
+  console.log("userdetails",userDetail);
   const navigate = useNavigate();
   useEffect(()=>{
     
@@ -54,14 +58,17 @@ const CourseCardDetails = () => {
         
   }
 
-  const handlePurchase = () => {  
+  const handlePurchase = async() => {  
     if(!token)
     {
        toast.error("Sign-up or Login to purchase this course");
        
     }
     else{
-    navigate(`/course/purchase-course/:${eachCourse._id}`);
+      
+      await BuyCourse(token,eachCourse._id,userDetail, navigate);
+
+   // navigate(`/course/purchase-course/:${eachCourse._id}`);
     }
   }
 

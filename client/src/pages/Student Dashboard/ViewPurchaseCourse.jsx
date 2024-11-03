@@ -10,6 +10,7 @@ import './ViewPurchaseCourse.css';
 const ViewPurchaseCourse = () => {
   const { token } = useSelector(state => state.auth);
   const { courseId } = useParams();
+  console.log("CRISID",courseId);
   const courseid = courseId.substring(1, courseId.length);
   const [profilemode , setProfilemode] = useState(false);
   const [viewData, setViewData] = useState(null);
@@ -18,7 +19,8 @@ const ViewPurchaseCourse = () => {
   const [isLoading, setIsLoading] = useState(true); // Loading state
   const [videoName,setVideoName] = useState(null);
   const [videoDescription,setVideoDescription] = useState(null);
-
+ 
+   console.log("CID",courseid);
 
   const handleVideoSelect = (videoData) => {
     console.log("videoData",videoData);

@@ -58,9 +58,19 @@ const WishlistCourses = () => {
       navigate(`/course/purchase-course/:${courseId}`);
       }
   }
-  // const handlePurchase =async (courseId) => {
-  //   await purchaseCourse(courseId,token);
-  // }
+
+  const handlePurchase1 = async() => {  
+    if(!token)
+    {
+       toast.error("Sign-up or Login to purchase this course");
+       
+    }
+    else{
+      
+      await BuyCourse(token,eachCourse._id,userDetail, navigate);
+
+    }
+  }
 
 
   return (
@@ -92,8 +102,8 @@ const WishlistCourses = () => {
                   <p className="wishlist-each-card-btn1" onClick={() => removeHandler(course._id)}>
                     Remove
                   </p>
-                  <p className="wishlist-each-card-btn2" onClick={() =>purchaseHandler(course._id)}>Buy Now</p>
-                 {/* <p onClick={()=> handlePurchase(course._id)}>Purchase</p> */}
+                  <p className="wishlist-each-card-btn2" onClick={handlePurchase1}>Buy Now</p>
+               
                 </div>
               </div>
             ))}

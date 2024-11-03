@@ -8,10 +8,13 @@ exports.auth= async(req,res,next)=>{
         //TODO: extract token
         const token = req.body.token || req.cookies.token || req.header("Authorization").replace("Bearer ","");
        //if token is missing then return the response
+       console.log("TOKEN",token);
         if(!token){
             return res.status(401).json({
+                error:error.message,
                 success:false,
-                message:"Login or Sign up first"
+                message:"Login or Sign up"
+               
             })
         }
         
@@ -22,11 +25,12 @@ exports.auth= async(req,res,next)=>{
     
         } catch (error) {
             res.status(401).json({
+                error:error.message,
                 success:false,
-                message:"Login or Sign up first"
+                message:"Login or Sign up"
             })
         }
-
+       
         next();
 
     } catch (error) {
@@ -43,6 +47,7 @@ exports.auth= async(req,res,next)=>{
                                             //isStudent check
 exports.isStudent = async(req,res,next)=>{
     try {
+        
         if(req.user.accountType!== "Student"){
             return res.status(401).json({
                 success:false,

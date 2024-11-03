@@ -1,5 +1,5 @@
 import React from 'react'
-import signup from '../assets/Images/signup.png'
+import signup from '../assets/Images/signup.webp'
 import frame from '../assets/Images/frame.png'
 import { IoIosEyeOff } from "react-icons/io";
 import { IoIosEye } from "react-icons/io";

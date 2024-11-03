@@ -17,10 +17,11 @@ import img3 from "../assets/Images/Plan_your_lessons.svg";
 import instructor from "../assets/Images/Instructor.png";
 import ReviewSection from '../components/Common/ReviewSection/ReviewSection';
 import FooterSection from '../components/Common/Footer/FooterSection';
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Home() {
+  const navigate = useNavigate();
 
   
   return (
@@ -29,8 +30,8 @@ function Home() {
      <section className='section1'>
         <div className='sub1'>
            <div className='sub11'>
-            <div className='sub111'>
-                <p>Become an Instructor</p>
+            <div className='sub111' onClick={()=>navigate("/signup")}>
+                <p >Become an Instructor</p>
                 <FaArrowRightLong />
             </div>
            </div>
@@ -40,8 +41,8 @@ function Home() {
            </div>
            <div className='sub13'>
               <div className='sub131'>
-              <BUTTON  active={true}   linkto={"/"}>Learn More</BUTTON>
-              <BUTTON  active={false} linkto={"/"}>Book a Demo</BUTTON>
+              <BUTTON  active={true}   linkto={"/about"}>Learn More</BUTTON>
+              <BUTTON  active={false} linkto={"/contact"}>Book a Demo</BUTTON>
               </div>
            </div>
         </div> 
@@ -148,7 +149,7 @@ function Home() {
                   <p>Go ahead, give it a try. Our hands-on learning environment means you will be writing real code from your very first lesson</p>
                   <div className='sub131 '>
                   <BUTTON active={true}   linkto={"/"}>Continue Lesson&nbsp;&nbsp; <FaArrowRightLong /></BUTTON>
-                  <BUTTON  active={false} linkto={"/"}>Learn More</BUTTON>
+                  <BUTTON  active={false} linkto={"/about"}>Learn More</BUTTON>
                   </div>
              </div>      
              </div>    
@@ -206,7 +207,7 @@ function Home() {
 
                <div className='s2-part33'>
                  
-                    <p><BUTTON  active={true}   linkto={"/"}>Learn More</BUTTON></p>
+                    <p><BUTTON  active={true}   linkto={"/about"}>Learn More</BUTTON></p>
                        
                </div>
 
@@ -229,20 +230,23 @@ function Home() {
                        <p>Become an</p>
                        <p><HighlightText text={"instructor"}/></p>
                        <p>Instructors from around the world teaches millions of Student on NotionAcademy. We provide the tools and skills to teac what you love.</p>
-                       <p><BUTTON active={true}   linkto={"/"}>Start Teaching Today&nbsp;&nbsp; <FaArrowRightLong /></BUTTON></p>
+                       <p><BUTTON active={true}   linkto={"/login"}>Start Teaching Today&nbsp;&nbsp; <FaArrowRightLong /></BUTTON></p>
                   </div>
 
               </div>
               
-              <div className='s3-part2'>
-                  <ReviewSection />
-              </div>
+              {/* <div className='s3-part2'>
+                 
+              </div> */}
+              
           </div>
+         
       </section>
 
       {/* Section 4 */}
 
       <section className='section4'>
+             <ReviewSection />
              <FooterSection />
       </section>
 

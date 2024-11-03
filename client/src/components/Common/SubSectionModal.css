@@ -1,6 +1,5 @@
-/* SubSectionModal.css */
 
-/* Modal Background */
+
 .modal-background {
     position: fixed;
     inset: 0;
@@ -9,9 +8,10 @@
     place-items: center;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    overflow-y: scroll;
   }
   
-  /* Modal Container */
+
   .modal-container {
     margin-top: 20px;   
     width: fit-content;
@@ -21,9 +21,10 @@
     background-color: #1b1b1b;
     border: 1px solid #333;
     height: fit-content;
+    overflow-y: scroll;
   }
   
-  /* Modal Header */
+
   .modal-header {
     display: flex;
     justify-content: space-between;
@@ -48,7 +49,7 @@
     cursor: pointer;
   }
   
-  /* Form Styles */
+  
   .form-container {
     padding: 10px 20px;
   }

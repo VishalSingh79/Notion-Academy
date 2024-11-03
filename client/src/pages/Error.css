@@ -1,0 +1,10 @@
+.error-content{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 12rem;
+    background-color: #000814;
+    color: white ;
+}

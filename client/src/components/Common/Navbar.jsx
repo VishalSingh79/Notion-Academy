@@ -82,7 +82,7 @@ function Navbar() {
     <div className='navbar'>
        <div className='navbar-content'>
               <div className='logo'>
-                <Link to={'/'} style={{textDecoration:"none",color:"white"}} ><img src={logo} width={170} height={70}/></Link>
+                <Link to={'/'} style={{textDecoration:"none",color:"white"}} ><img src={logo} className='logo-image'/></Link>
               </div>
               <nav className='nav-links'>
                         {/* desktop-view */}

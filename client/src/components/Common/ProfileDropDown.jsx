@@ -59,7 +59,7 @@ function ProfileDropDown() {
             </p>
             <div style={{position:"absolute",width:"30px",height:"30px",transform:"rotate(45deg)",
                 backgroundColor:"white",borderRadius:"5px",
-                left:"2rem",top:"37px",
+                left:"2.28rem",top:"37px",
                 scale: mode ? '0' : '1'
                 }}></div>
             <div className='rec-div1' 

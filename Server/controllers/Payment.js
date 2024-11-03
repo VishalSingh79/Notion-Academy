@@ -1,21 +1,22 @@
 const {instance} = require("../config/razorpay");
 const Course = require("../models/Course");
 const User = require("../models/User");
-const {mailSender} = require("../utils/mailSender");
+const mailSender = require("../utils/mailSender");
 const {default:mongoose} =require("mongoose");
 const emailTemplate = require("../mail/templates/courseEnrollmentEmail");
-
+const crypto = require("crypto");
+require("dotenv").config();
 //TODO : => MAIL TEMPLATE FOR THE COURSE-ENROLLEMENT 
 
 //capture the payment and initiate the razorpay order
 exports.capturePayment = async(req,res)=>{
     try {
         //get courseID and userID
-        const {course_id} = req.body
+        const {courseId} = req.body
         const userId = req.user.id;
-
+        console.log("COURSEID",courseId);
         //valid courseId
-        if(!course_id){
+        if(!courseId){
             return res.status(400).json({
                 success:false,
                 message:"Please Provide a valid Course"
@@ -24,32 +25,33 @@ exports.capturePayment = async(req,res)=>{
 
         //validating the courseDetails
         let course;
-        course = await Course.findById(course_id);
+        course = await Course.findById(courseId);
         if(!course){
             return res.status(400).json({
                 success:false,
                 message:"NO valid course Details"
             })
         }
-        
+        //console.log("course",course);
+
         //user already paid for that course or not( course ke model ke andar user object_id mai store hai so hme user ki object_id pta krni hogi user_id se )
-        const uid = mongoose.Types.ObjectId(userId);
-        if(course.studentsEnrolled.includes(uid)){
+       // const uid = mongoose.Types.ObjectId(userId);
+        if(course.studentsEnrolled.includes(userId)){
             return res.status(400).json({
                 success:false,
-                message:"Student is already Enrolled in this Course"
+                message:"You are already Enrolled in this Course"
             })
         }
        //creating an order
        const amount = course.price;
        const currency = "INR";
-
+       console.log("amount",amount)
        const options = {
          amount: amount *100,
          currency,
          receipt:Math.random(Date.now()).toString(),
          notes:{
-            courseId :course_id,
+            courseId :courseId,
             userId
          },
        };
@@ -84,26 +86,44 @@ exports.capturePayment = async(req,res)=>{
     } catch (error) {
         return res.status(500).json({
             success:false,
-            message:"Something went wrong during the payment capture"
+            message:"Something went wrong during the payment capture",
+            error:error.message
         })
     }
 }
 
 //verify signature of Razorpay and Server (matching the secret of server and the secret send by the razorpay)
 exports.verifySignature = async(req,res)=>{
-    const webhookSecret = "12345678";
 
-    const signature =req.headers("x-razorpay-signature");
+    const {razorpay_order_id ,razorpay_payment_id,razorpay_signature,courseId} = req.body
+    
+    const userId = req.user.id
+
+    if (
+      !razorpay_order_id ||
+      !razorpay_payment_id ||
+      !razorpay_signature ||
+      !courseId ||
+      !userId
+    ) {
+      return res.status(200).json({ success: false, message: "Payment Failed" })
+    }
+
+    //const webhookSecret = "12345678";
+    
+    let body = razorpay_order_id + "|" + razorpay_payment_id
+  //  const signature =req.headers("x-razorpay-signature");
     
     //hashing the webhookSecret
-    const shasum = crypto.createHmac("sha256",webhookSecret);
-    shasum.update(JSON.stringify(req.body));
-    const digest= shasum.digest("hex");
+    const expectedSignature = crypto
+    .createHmac("sha256", process.env.RAZORPAY_SECRET)
+    .update(body.toString())
+    .digest("hex")
 
-    if(signature===digest){
+    if(expectedSignature === razorpay_signature){
         console.log("Payment is Authorised");
 
-        const {courseId,userId}=req.body.payload.payment.entity.notes;
+      //  const {courseId,userId}=req.body.payload.payment.entity.notes;
         
         try {
             //fulfill the Action now
@@ -119,8 +139,8 @@ exports.verifySignature = async(req,res)=>{
             
 
             //find the student and enter the course id in the courses array of student
-           const enrolledStudent = await User.findOneAndUpdate({_id:userId},{$push:{courses:courseId}},{new:true});
-
+           const enrolledStudent = await User.findOneAndUpdate({_id:userId},{$push:{enrolledCourses:courseId}},{new:true});
+           console.log("enrollStudent",enrolledStudent);
 
            if(!enrolledStudent){
             return res.status(400).json({
@@ -143,7 +163,8 @@ exports.verifySignature = async(req,res)=>{
         } catch (error) {
             return res.status(400).json({
                 success:false,
-                message:"Error while payment authorisation"
+                message:"Error while payment authorisation",
+                error:error.message
             })
         }
 

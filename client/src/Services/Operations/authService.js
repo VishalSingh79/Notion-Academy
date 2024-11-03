@@ -2,8 +2,9 @@ import { contactusEndpoint, endpoints ,settingsEndpoints } from "../allApis"
 import { toast } from "react-toastify"
 import { apiConnector } from "../apiConnector";
 import { setToken } from "../../slices/authSlice";
-import { setUser ,setType} from "../../slices/profileSlice";
+import { setUser ,setType , setUserDetail} from "../../slices/profileSlice";
 import { setTotalItems } from "../../slices/cartSlice";
+
 
 const { RESETPASSWORD_API } = endpoints
 
@@ -26,9 +27,10 @@ export const loginUP= async(data,navigate,dispatch)=>{
         toast.dismiss(toastId);
         dispatch(setToken(response.data.data));   
         dispatch(setUser(response.data.user));
-        console.log(response.data.user);
+       // console.log(response.data.user);
         dispatch(setType(response.data.type));
-        console.log("User Data -> ",response.data.user);
+        dispatch(setUserDetail(response.data.user));
+      //  console.log("User Data -> ",response.data.user);
         return navigate("/dashboard/my-profile");
 
     } catch (error) {
@@ -41,7 +43,7 @@ export const loginUP= async(data,navigate,dispatch)=>{
                 return toast.error("Create a account first!!");
             }
         }
-        toast.error("Error login up");
+        toast.error(error.response.data.message || "Error in Login");
     }
 
 }

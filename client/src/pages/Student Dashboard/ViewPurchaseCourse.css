@@ -13,7 +13,7 @@
 
 .main-viewCourse-content1{
     width: 100vw;
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh);
     background-color:#000814 ;
     height: fit-content;
     justify-content: center;

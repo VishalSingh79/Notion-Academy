@@ -17,10 +17,10 @@ const {
   removeWishList,
   allEnrolledCourses,
   addWishlist,
-  getDetailedEnrolledCourse
+  
 } = require("../controllers/Course")
 
-const {enrollCourses} = require("../controllers/Course");
+const {enrollCourses ,getDetailedEnrolledCourse} = require("../controllers/Course");
 
 // Categories Controllers Import
 const {

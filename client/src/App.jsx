@@ -24,7 +24,7 @@ import PurchaseCourse from './components/Common/PurchaseCourse';
 import EnrolledCourses from './pages/Student Dashboard/EnrolledCourses';
 import ViewPurchaseCourse from './pages/Student Dashboard/ViewPurchaseCourse';
 import Forum from './components/core/Forum';
-//import ResetComplete from './pages/Password Reset Pages/ResetComplete';
+import Error from './pages/Error';
 
 
 function App() {
@@ -77,6 +77,7 @@ function App() {
            <Route path="my-courses" element={<MyCourses/>} /> 
            <Route path='wishlist-courses' element = {<WishlistCourses/>} />
            <Route path='enrolled-courses' element = {<EnrolledCourses/>} />
+           <Route patch="*" element={<Error/>} />
            
       </Route>
 
@@ -90,6 +91,8 @@ function App() {
       <Route path='/course/watchCourse/:courseId' element = {<ViewPurchaseCourse/>} />
 
       <Route path="/course/watchCourse/:courseId/questions/doubt-forum" element={<Forum/>} />
+
+      <Route path='*' element={<Error/>} />
 
      </Routes> 
     

@@ -508,6 +508,7 @@ exports.getDetailedEnrolledCourse = async (req, res) => {
   try {
     
     const { courseId } = req.query;
+    console.log("courseID",courseId);
     const userId = req.user.id;
     console.log("courseID",courseId);
     const courseData = await User.findOne({ _id: userId, 

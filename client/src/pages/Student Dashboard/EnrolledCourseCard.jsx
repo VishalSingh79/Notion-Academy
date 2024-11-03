@@ -4,8 +4,8 @@ import "./EnrolledCourseCard.css"
 
 const EnrolledCourseCard = ({course}) => {
   
+  console.log("courseidddd",course._id);
   
-
   return (
     <div className='each-enrolled-course-card'>
        <p>

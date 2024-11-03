@@ -1,10 +1,18 @@
 .review-section{
-    width: 100%;
-    min-width: max-content;
+    width: 100vw;
+    /* min-width: max-content; */
     background-color:#000814;
     height: fit-content;
     padding-bottom: 4rem ;
     padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-section-content{
+    width: 80vw; 
+    ;
 }
 
 .review-heading{
@@ -20,12 +28,8 @@
     letter-spacing: 0.2px;
 }
 
-
-.review-section-content{
-    width: 100%; 
-}
 .review-card{
-    width: 100vw;
+    width: 100%;
     display: flex;
     overflow-x: scroll;
     gap: 1rem;
@@ -34,7 +38,14 @@
     -ms-overflow-style: none;
 }
 
-@media (max-width:450px) {
+@media (max-width:500px) {
+    .review-heading{
+        text-align: start;
+        font-size: 19px;
+    }
+    .review-section-content{
+        width: 95vw;
+    }
     .review-card{
         width: 95vw;
     }
