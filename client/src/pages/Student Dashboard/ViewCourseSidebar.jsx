@@ -40,7 +40,7 @@ const ViewCourseSidebar = ({ courseContent, onVideoSelect ,courseId}) => {
       {courseContent.map((section) => (
         <details key={section._id} className="view-section">
           <summary className='view-sectionName'>{section.sectionName}</summary>
-          <ul >
+          <ul className='list-subSection'>
             {section.subSection.map((subSection) => (
               <li
                 key={subSection._id}
