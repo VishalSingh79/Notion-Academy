@@ -41,11 +41,9 @@ function ProfileDropDown() {
     <div className='my-profile-content'
         onClick={handleClick}
       >
-       <div className='my-picture'
+       
+        <img src={profile} width={38} height={38} style={{borderRadius:"50%"}}/>
         
-        >
-        <img src={profile} width={38} height={38}/>
-        </div>
             <p 
                 style={{
                   color:'#DBDCEB',  

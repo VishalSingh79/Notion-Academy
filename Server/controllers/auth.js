@@ -8,6 +8,8 @@ const Profile=require("../models/Profile");
 const jwt = require("jsonwebtoken");
 const mailSender=require("../utils/mailSender")
 const emailTemplate = require("../mail/templates/passwordUpdate");
+const Category = require("../models/Category");
+
 
 require("dotenv").config();
 
@@ -126,17 +128,22 @@ exports.signup = async (req, res) => {
             gender: null,
             contactNumber: null
         });
-
+        
+        const courseName = await Category.findOne({ name: "Web  Development" });
+        if(courseName.courses.length>0){
+           const courseId = courseName.courses[0]._id;
+        }
         const createEntry = await User.create({
             firstName,
             lastName,
             password: hashedPassword,
             email,
             accountType,
+            enrolledCourses:[courseId],
             additionalDetails: profileDetails._id,
             image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`
         });
-
+        
         return res.status(200).json({
             success: true,
             message: "Your Account is created in our database",

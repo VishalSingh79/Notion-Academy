@@ -14,11 +14,11 @@ import timelineimage from "../assets/Images/TimelineImage.png";
 import img1 from "../assets/Images/Know_your_progress.svg";
 import img2 from "../assets/Images/Compare_with_others.svg";
 import img3 from "../assets/Images/Plan_your_lessons.svg";
-import instructor from "../assets/Images/Instructor.png";
+import instructor from "../assets/Images/Instructor.webp";
 import ReviewSection from '../components/Common/ReviewSection/ReviewSection';
 import FooterSection from '../components/Common/Footer/FooterSection';
 import { useNavigate } from 'react-router-dom';
-
+import image1 from "../assets/Images/image1.webp";
 
 function Home() {
   const navigate = useNavigate();
@@ -48,14 +48,13 @@ function Home() {
         </div> 
 
         <div className='hero-section-image'>
-            <video 
-            loop
-            autoPlay
-            muted        
-            className='video1'
-            >
-             <source src={video} type='video/mp4' />
-            </video>
+           
+            <img 
+              src={image1}
+              alt='image'
+              className='video1'
+            />
+
         </div> 
 
         <div className='section-content3'>
@@ -223,7 +222,7 @@ function Home() {
           <div className='section3-content'>
               <div className='s3-part1'>
                   <div className='s3-part11'>
-                      <img src={instructor}  style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.3)" }} className='s3-part11'/>
+                      <img src={instructor}  style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.3)",borderRadius:"7px" }} className='s3-part11'/>
                   </div>
 
                   <div className='s3-part12'>
