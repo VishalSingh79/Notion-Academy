@@ -16,6 +16,7 @@ function SettingPage() {
   const { token } = useSelector((state) => state.auth);
   const [modalData, setModalData] = useState(null);
   const dispatch = useDispatch();
+
   
   // States for handling profile picture selection
   const [isPictureSelected, setIsPictureSelected] = useState(false);
@@ -229,7 +230,7 @@ function SettingPage() {
         </div>
 
         {/* Delete Account*/}
-         <div className='setting-content4' onClick={deleteAcc}
+         <div className='setting-content4' onClick={deleteAccount}
           >
               <div className='bin-icon'><RiDeleteBin5Fill style={{fontSize:"25px",color:"#EE466F"}}/></div>
               <div className='bin-content'>

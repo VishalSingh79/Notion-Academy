@@ -130,8 +130,9 @@ exports.signup = async (req, res) => {
         });
         
         const courseName = await Category.findOne({ name: "Web  Development" });
+        let courseId;
         if(courseName.courses.length>0){
-           const courseId = courseName.courses[0]._id;
+          courseId = courseName.courses[0]._id;
         }
         const createEntry = await User.create({
             firstName,
@@ -232,92 +233,6 @@ exports.login = async (req,res)=>{
         })
     }
 }
-
-                                        //change password
-
-// exports.changePassword = async(req,res)=>{
-//     try {
-//         //fetching the data from the request body
-//         const {oldPassword,newPassword,confirmPassword}=req.body;
-        
-//         //performing the validation 
-//         if(!oldPassword || !newPassword || !confirmPassword){
-
-//             return res.status(400).json({
-//                 success:false,
-//                 message:"Please fill all the fields carefully"
-//             })
-//         }
-
-//         //Extracting the email from the token, so that  when the user gives the oldPassword we can verify that it is correct or not
-        
-//         const token = req.body.token || req.cookies.token || req.header("Authorization").replace("Bearer ","");
-
-//         // Check if token exists
-//         if (!token) {
-//             return res.status(401).json({
-//                 success: false,
-//                 message: "No token found, Please log in"
-//             });
-//         }
-      
-//         const payload = jwt.verify(token,process.env.JWT_SECRET);
-//         const userEmail = payload.email;
-//         console.log(userEmail);
-//         const user = await User.findOne({email:userEmail});
-//         console.log(user.password);
-//         const matched= await bcrypt.compare(oldPassword,user.password);
-//         console.log(matched);
-
-//         if(!matched){
-//             console.log("Please Enter your correct current password");
-//             return res.status(400).json({
-//                 success:false,
-//                 message:"current Password is incorrect"
-//             })
-//         }
-
-//         //Now matching both the newPassword and confirmPassword is same or not
-//         if(newPassword!==confirmPassword){
-//             return res.status(400).json({
-//                 success:false,
-//                 message:"newPassword and confirmPassword are not same"
-//             })
-//         }
-//         //hashing the password then saving the hashed password
-
-//         const hashedPassword = await bcrypt.hash(newPassword,10);
-//        console.log("Password is hashed!!");
-//         //updating the Password into the database
-//         const userUpdated = await User.findByIdAndUpdate({_id:user._id},{password:hashedPassword},{new:true});
-
-//         if(!userUpdated){
-//             return res.status(500).json({
-//                 success:false,
-//                 message:"Failed to update password"
-//             })
-//         }
-//         const fname = userUpdated.firstName;
-//         const sname = userUpdated.lastName
-
-//         const name = `${fname} ${sname}`;
-
-//         const emailResponse= await mailSender(user.email,"Password changed Successfully!! | Notion Academy",emailTemplate.passwordUpdated(email,name));
-        
-//         return res.satus(200).json({
-//             success:true,
-//             message:"Password is changed Successfully"
-//         })
-
-
-//     } catch (error) {
-//         console.log("Error in changing the password", error);
-//         return res.status(500).json({
-//             success:false,
-//             message:"Change Password Failed.."
-//         })
-//     }
-// }
 
 exports.changePassword = async (req, res) => {
     try {

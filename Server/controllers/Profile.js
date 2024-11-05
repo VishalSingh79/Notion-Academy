@@ -65,7 +65,7 @@ exports.deleteAccount = async(req,res)=>{
     try {
         //get the user id
         const id=req.user.id;
-
+        console.log("HIIO");
         //validate that the user Exist or not
         const userDetails = await User.findById(id);
         console.log(userDetails);
@@ -93,7 +93,8 @@ exports.deleteAccount = async(req,res)=>{
     } catch (error) {
         return res.status(500).json({
             success:false,
-            message:"Error in deleting the Account"
+            message:"Error in deleting the Account",
+            error:error.message
         })
     }
 }

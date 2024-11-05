@@ -327,9 +327,10 @@ export const  updatePassword = async(formData,token)=>{
 export  const deleteAcc =async(token,navigate,dispatch)=>{
     const toastId = toast.loading("Loading...");
     try {
-        
+        console.log("ToKeN",token);
         const response =await apiConnector("DELETE", 
-             settingsEndpoints.DELETE_PROFILE_API,{},
+             settingsEndpoints.DELETE_PROFILE_API,
+             null,
              {
                 Authorization: `Bearer ${token}`,
              }
