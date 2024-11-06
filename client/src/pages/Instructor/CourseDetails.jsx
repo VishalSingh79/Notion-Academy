@@ -190,7 +190,7 @@ function CourseDetails() {
                {/* Price */}
                <div className="form-group price-tag-form">
                  <label>Price *</label>
-                 <p className='price-wrapper'><HiOutlineCurrencyRupee /></p>
+                 <p className='price-wrapper' style={{backgroundColor:"transparent"}}><HiOutlineCurrencyRupee /></p>
                  <input
                   //  defaultValue={data.price ? data.price : '' }
                    type="text"

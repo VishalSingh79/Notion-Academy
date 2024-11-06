@@ -164,11 +164,13 @@ function Signup() {
               })}
             />
         
-            
-            {open1 ?        
-              <IoIosEye onClick={changeHandler1} className='eye-size' /> :    
-              <IoIosEyeOff onClick={changeHandler1} className='eye-size'/>
-            }
+            <span className='eye-size-wrapper'>
+                {open1 ?        
+                  <IoIosEye onClick={changeHandler1} className='eye-size' /> :    
+                  <IoIosEyeOff onClick={changeHandler1} className='eye-size'/>
+                }
+            </span>
+           
             </div>
       
             <div>

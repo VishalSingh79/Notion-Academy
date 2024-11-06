@@ -103,6 +103,7 @@
     padding: 0rem 0.6rem;
     letter-spacing: 1px;
     font-size: medium;
+    
   }
   .input-sec1::placeholder{
     letter-spacing: 0.5px;
@@ -123,7 +124,7 @@
     position: relative;
     top:1vh;
     left:-1.9rem;
-    background-color: #171D28;
+    background-color:transparent;
     margin-right: -1.5rem;
     
   }
