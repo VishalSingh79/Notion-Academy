@@ -15,7 +15,6 @@ const Forum = () => {
   const [questionsAndAnswers, setQuestionsAndAnswers] = useState([]);
   const [refresh , setRefresh] = useState(false);
   const courseid = courseId.substring(1);
-  //console.log("courseIDDDD", courseid);
 
   useEffect(() => {
     const fetchQuestionsAndAnswers = async () => {
@@ -35,9 +34,9 @@ const Forum = () => {
 
   console.log("questionsAndAnswers", questionsAndAnswers);
   const handleQuestionPost = async (text) => {
-   // console.log("Doubt Text:", doubtText);
+
     await createQuestion(text, courseid, token);
-   // console.log("Posted Doubt:", doubtText);
+   
     setModalData(null); 
     setRefresh(!refresh);
   };
@@ -51,6 +50,7 @@ const Forum = () => {
     } catch (error) {
       console.error("Error posting answer:", error);
     }
+
   };
   
 
@@ -76,7 +76,7 @@ const Forum = () => {
         <div className='course-forum-body'>
               {
               questionsAndAnswers.length > 0 ? (
-                questionsAndAnswers.map((eachQuestion) => (
+                questionsAndAnswers.map((eachQuestion) => (  
                   <details key={eachQuestion._id} className='course-forum-question'>
                     <summary className='course-forum-question-summary'>
                     <div className='forum-question-summary-part1'>
@@ -111,7 +111,7 @@ const Forum = () => {
                               <div key={answer._id || index} className='answer'>
                                 <div>
                                     <div className='forum-question-summary-part21'>
-                                    <p><img src={eachQuestion.askedBy.image} style={{width:"100%" ,height:"100%"}} alt="profile"/></p>
+                                    <p><img src={eachQuestion.answeredBy.image} style={{width:"100%" ,height:"100%"}} alt="profile"/></p>
                                     </div>
                                 </div>
                                 <div className='forum-answer-div2'>
