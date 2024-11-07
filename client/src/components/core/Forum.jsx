@@ -54,7 +54,6 @@ const Forum = () => {
   };
   
 
-
   return (
     <div className='course-forum-wrapper'>
       <div className='course-forum-content'>
@@ -111,7 +110,8 @@ const Forum = () => {
                               <div key={answer._id || index} className='answer'>
                                 <div>
                                     <div className='forum-question-summary-part21'>
-                                    <p><img src={eachQuestion.answeredBy.image} style={{width:"100%" ,height:"100%"}} alt="profile"/></p>
+                                    <p><img src={answer?.answeredBy?.image} style={{width:"100%" ,height:"100%"}} alt="profile1"/></p>
+                                    
                                     </div>
                                 </div>
                                 <div className='forum-answer-div2'>
