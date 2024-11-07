@@ -137,7 +137,7 @@ function Signup() {
             name='email' 
             id='email' 
             required 
-            className='input-sec1 less-than'
+            className='input-sec11 less-than'
             {...register('email', { 
               required: "Email is required**" 
             })}

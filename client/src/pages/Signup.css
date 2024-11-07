@@ -2,7 +2,7 @@
     width:100vw;
     height: calc(100vh - 50px);
     box-sizing: border-box;
-    background-color: #000814;
+    background-color: #070d20;
     font-family: sans-serif;
   }
 .pages{
@@ -20,7 +20,8 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #000814;
+    background-color: #070d20;
+    padding-bottom: 2.5rem;
   }
   .part2 {
     display: flex;
@@ -28,7 +29,7 @@
     align-items: center;
     width: 45%;
     height: 100%;
-    background-color: #000814;
+    background-color: #070d20;
 
 }
 
@@ -91,7 +92,7 @@
     color:rgba(245, 245, 245, 0.795);
     font-family:  sans-serif;
   }
-.input-sec1{
+.input-sec11{
     width:100%;
     height: 2.7rem;
     box-sizing: border-box;
@@ -209,7 +210,7 @@
       width:100%;
       flex-direction:column-reverse;
       height:fit-content;
-      gap: 2rem;
+      gap: 1rem;
     }
     .part2{
       width:100%;
@@ -303,4 +304,7 @@
         width: 250px;
         height: 250px;
     } 
+    .input-sec11{
+      width: fit-content;
+    }
 }  

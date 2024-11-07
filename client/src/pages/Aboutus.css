@@ -1,6 +1,6 @@
 /* General styles for the container */
 .about-us-container {
-    background-color:  #000814;
+    background-color:  #070d20;
     color: #ffffff;
     padding: 0rem;
     text-align: center;
@@ -185,7 +185,7 @@
 
     .about-images img {
         width: 250px;
-        height: 150px;
+        height: 190px;
     }
 
     .content-section p, .vision p, .mission p {

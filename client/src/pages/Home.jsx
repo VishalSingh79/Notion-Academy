@@ -28,12 +28,7 @@ function Home() {
       {/* Section 1 */}
      <section className='section1'>
         <div className='sub1'>
-           {/* <div className='sub11'>
-            <div className='sub111' onClick={()=>navigate("/signup")}>
-                <p >Become an Instructor</p>
-                <FaArrowRightLong />
-            </div>
-           </div> */}
+          
            <div className='sub12'>
             <p>Boost your future with powerful <HighlightText text={"Coding Skills"}/></p>
             <p>With our online coding courses,you can learn at your own pace,from anywhere in the world,and get access to a wealth of resources,including hands-on projects,quizzes,and personalized feedback from the instructors.</p>
@@ -188,7 +183,7 @@ function Home() {
 
             </div>
 
-            <div className='section2-part3'>
+            {/* <div className='section2-part3'>
                <div className='s2-part31'>
                       <p>Your swiff knife for <HighlightText text={"learning any language"}/> </p>
                       <p>Using spin making learning miltiple languages easy. with 20+ languages realistic voice-over,progress tracking,custom schedule and more</p>
@@ -209,7 +204,7 @@ function Home() {
                        
                </div>
 
-            </div> 
+            </div>  */}
             </div>
 
       </section>
