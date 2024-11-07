@@ -9,7 +9,6 @@ import { formattedDate } from '../../utils/DateFormatter';
 import { calculateTotalCourseDuration } from '../../utils/TimeConvertor';
 import CourseComponent from './CourseDropDown';
 import FooterSection from '../Common/Footer/FooterSection';
-// import {CourseContentDropDown} from "./CourseContentDropDown";
 import { addWishlistCourses } from '../../Services/Operations/courseDetailsAPI';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -120,15 +119,7 @@ const CourseCardDetails = () => {
 
                     <div className='each-section2-part2'>
                         <p className='each-section2-part21'>Course Content</p>
-                        {/* <div className='each-section2-part22'>
-                               <p>{eachCourse.courseContent.length} Sections</p>
-                               <p>{totalLectures} Lectures</p>
-                               <p>
-                                {
-                                  calculateTotalCourseDuration(eachCourse)
-                                  }&nbsp; total length
-                                </p>
-                        </div> */}
+                       
 
                         <div className='each-section2-part23'>
                             {/* <CourseContentDropDown /> */}
@@ -137,8 +128,8 @@ const CourseCardDetails = () => {
 
                         <div className='each-section2-part24'>
                             <p className='author-tag-name'>Author</p>
-                            <div className='author-short-info'>
-                            <img style={{width:"80px", height:"80px",marginTop:"10px"}} src={eachCourse.instructor.image} />
+                            <div className='author-short-info' style={{gap:"1rem"}}>
+                            <img style={{width:"80px", height:"80px",marginTop:"10px",borderRadius:"50%"}} src={eachCourse.instructor.image} />
                             <p className='author-name-short'> {eachCourse.instructor.firstName} {eachCourse.instructor.lastName}</p>
                             </div>
                             <p className='author-short-desc'>{eachCourse.instructor.additionalDetails.about ? eachCourse.instructor.additionalDetails.about : ""}</p>

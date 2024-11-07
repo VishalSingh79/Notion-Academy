@@ -3,7 +3,6 @@ import './Home.css'
 import { FaArrowRightLong } from "react-icons/fa6";
 import HighlightText from '../components/home/HighlightText';
 import BUTTON from '../components/home/BUTTON';
-import video from '../assets/Images/banner.mp4';
 import{TypeAnimation} from 'react-type-animation';
 import TimeLineLogo from '../components/home/TimeLineLogo';
 import logo1 from "../assets/TimeLineLogo/Logo1.svg"
@@ -29,14 +28,14 @@ function Home() {
       {/* Section 1 */}
      <section className='section1'>
         <div className='sub1'>
-           <div className='sub11'>
+           {/* <div className='sub11'>
             <div className='sub111' onClick={()=>navigate("/signup")}>
                 <p >Become an Instructor</p>
                 <FaArrowRightLong />
             </div>
-           </div>
+           </div> */}
            <div className='sub12'>
-            <p>Empower Your Future with <HighlightText text={"Coding Skills"}/></p>
+            <p>Boost your future with powerful <HighlightText text={"Coding Skills"}/></p>
             <p>With our online coding courses,you can learn at your own pace,from anywhere in the world,and get access to a wealth of resources,including hands-on projects,quizzes,and personalized feedback from the instructors.</p>
            </div>
            <div className='sub13'>

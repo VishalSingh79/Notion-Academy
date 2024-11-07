@@ -3,6 +3,7 @@ import { getAllWishlistCourses, removeWishlistCourse,purchaseCourse } from '../.
 import { useSelector } from 'react-redux';
 import './WishlistCourses.css';
 import { useNavigate } from 'react-router-dom';
+import { BuyCourse } from '../../Services/Operations/coursePayment';
 
 const WishlistCourses = () => {
   const { token } = useSelector((state) => state.auth);
@@ -10,7 +11,7 @@ const WishlistCourses = () => {
   const [instructorName, setInstructorName] = useState('');
   const [removedCourseId, setRemovedCourseId] = useState(null);
   const navigate = useNavigate();
-
+  const {userDetail} =useSelector(state => state.profile);
   const [charLimit, setCharLimit] = useState(window.innerWidth < 400 ? 50 : 60);
 
   useEffect(() => {
@@ -59,15 +60,14 @@ const WishlistCourses = () => {
       }
   }
 
-  const handlePurchase1 = async() => {  
+  const handlePurchase1 = async(CourseId) => {  
     if(!token)
     {
        toast.error("Sign-up or Login to purchase this course");
        
     }
-    else{
-      
-      await BuyCourse(token,eachCourse._id,userDetail, navigate);
+    else{    
+      await BuyCourse(token,CourseId,userDetail, navigate);
 
     }
   }
@@ -102,7 +102,7 @@ const WishlistCourses = () => {
                   <p className="wishlist-each-card-btn1" onClick={() => removeHandler(course._id)}>
                     Remove
                   </p>
-                  <p className="wishlist-each-card-btn2" onClick={handlePurchase1}>Buy Now</p>
+                  <p className="wishlist-each-card-btn2" onClick={()=>handlePurchase1(course._id)}>Buy Now</p>
                
                 </div>
               </div>

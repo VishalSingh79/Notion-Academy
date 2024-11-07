@@ -1,5 +1,5 @@
 :root{
-  --rich-black:#000814;
+  --rich-black:#070d20;
 
 }
 /* #000814 */
@@ -509,6 +509,9 @@
     }
     .s3-part11{
         max-width: 370px;
+    }
+    .s3-part12{
+        padding-bottom: 2rem;
     }
     
 }
