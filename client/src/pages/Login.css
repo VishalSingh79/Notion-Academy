@@ -197,6 +197,15 @@
     color:red;
     transition: 400ms;
   }
+  
+  .login-password{
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+
+
   @media(min-width:851px) and (max-width:1204px){
     .img1{
       width:350px;

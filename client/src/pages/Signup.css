@@ -120,7 +120,7 @@
   .up-email{
     margin-top: 0.5rem;
   }
-  .eye-size{
+  /* .eye-size{
     font-size:1.5rem;
     position: relative;
     top:1vh;
@@ -128,7 +128,7 @@
     background-color:transparent;
     margin-right: -1.5rem;
     
-  }
+  } */
 
   .btn-submit{
     width:100%;
@@ -191,6 +191,21 @@
     color:red;
     transition: 400ms;
   }
+  
+  .eye-size-wrapper{
+    width: 35px;
+    height: 35px;
+    background-color: #171D28;
+    position: absolute;
+    top: 2rem;
+    right: 0.1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
   @media(min-width:851px) and (max-width:1204px){
     .img1{
       width:350px;

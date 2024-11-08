@@ -146,7 +146,7 @@ function Signup() {
         </div>
       
         <div className='name-section'>
-          <div>
+          <div style={{position:"relative"}}>
             <label htmlFor='ppassword' className='label'>Password<sup className='sups'>*</sup></label>
             <br/>
             <input 
@@ -164,16 +164,16 @@ function Signup() {
               })}
             />
         
-            <span className='eye-size-wrapper'>
+            <p className='eye-size-wrapper'>
                 {open1 ?        
-                  <IoIosEye onClick={changeHandler1} className='eye-size' /> :    
-                  <IoIosEyeOff onClick={changeHandler1} className='eye-size'/>
+                  <IoIosEye onClick={changeHandler1} style={{fontSize:"20px",cursor:"pointer",color:"grey"}} /> :    
+                  <IoIosEyeOff onClick={changeHandler1} style={{fontSize:"20px",cursor:"pointer",color:"grey"}}/>
                 }
-            </span>
+            </p>
            
             </div>
       
-            <div>
+            <div  style={{position:"relative"}}>
             <label htmlFor='cpassword' className='label'>Confirm Password<sup className='sups'>*</sup></label>
             <br/>
             <input 
@@ -189,11 +189,12 @@ function Signup() {
               })}
             />
       
-            
-            {open2 ?     
-              <IoIosEye onClick={changeHandler2} className='eye-size' /> :
-              <IoIosEyeOff onClick={changeHandler2} className='eye-size' />
-            }
+             <p className='eye-size-wrapper'>
+                {open2 ?        
+                  <IoIosEye onClick={changeHandler1} style={{fontSize:"20px",cursor:"pointer",color:"grey"}} /> :    
+                  <IoIosEyeOff onClick={changeHandler1} style={{fontSize:"20px",cursor:"pointer",color:"grey"}}/>
+                }
+            </p>
           </div>
         </div>
          <div>
