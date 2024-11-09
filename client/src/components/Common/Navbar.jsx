@@ -124,6 +124,7 @@ function Navbar() {
                                       }}
                                       >
                                         {
+                                          subLinks.length>0 ?
                                           subLinks.map((link)=>(
                                             <Link to={`/catalog/${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                                                   style={{textDecoration:"none",color:"black"}}
@@ -137,6 +138,10 @@ function Navbar() {
                                               </p>
                                             </Link>
                                           ))
+                                          :
+                                          (
+                                            <p style={{color:"black",textAlign:"center"}}>Loding...</p>
+                                          )
                                         }
                                     </div>
                                   </div>
@@ -197,7 +202,9 @@ function Navbar() {
                                                   zIndex: '10'
                                                 }}
                                               >
-                                                {subLinks.map((subLink) => (
+                                                {
+                                                  subLinks.length > 0 ?
+                                                  subLinks.map((subLink) => (
                                                   <Link
                                                     className='catalog-each-link1'
                                                     to={`/catalog/${subLink.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -207,7 +214,11 @@ function Navbar() {
                                                   >
                                                     <p className='link-name'>{subLink.name}</p>
                                                   </Link>
-                                                ))}
+                                                )):
+                                                (
+                                                  <p style={{color:"white",textAlign:"center"}}>Loding...</p>
+                                                )
+                                                }
                                               </div>
                                             </div>
                                           ) : (
