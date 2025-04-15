@@ -11,7 +11,9 @@
 </ul>
 
 <p>Each course includes a <strong>Doubt Forum</strong>, enabling students to ask questions, interact with instructors and peers, and foster a collaborative learning environment.</p>
-
+<p>Login Demo Access:</p>
+<p>Email: us55547660@gmail.com</p>
+<p>Password: 12@A12</p>
 ## <h2>Tech Stack</h2>
 
 <ul>
