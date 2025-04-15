@@ -14,7 +14,7 @@
 <p>Login Demo Access:</p>
 <p>Email: us55547660@gmail.com</p>
 <p>Password: 12@A12</p>
-## <h2>Tech Stack</h2>
+<h2>Tech Stack</h2>
 
 <ul>
   <li><strong>Frontend</strong>: <a href="https://reactjs.org/">React.js</a> for building an interactive UI and <a href="https://redux.js.org/">Redux</a> for state management.</li>
